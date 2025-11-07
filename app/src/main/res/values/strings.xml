@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMail</string>
+    <string name="menu_home">Menu</string>
+    <string name="menu_gallery">menu_gallery</string>
+    <string name="menu_slideshow">menu_slideshow</string>
+    <string name="home">home</string>
+</resources>
