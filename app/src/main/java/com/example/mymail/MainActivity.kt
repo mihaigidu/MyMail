@@ -1,5 +1,6 @@
 package com.example.mymail
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ArrayAdapter
@@ -39,19 +40,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val fragment = when (item.itemId) {
-            R.id.nav_inbox -> InboxFragment()
-            R.id.nav_outbox -> OutboxFragment()
-            R.id.nav_trash -> TrashFragment()
-            R.id.nav_spam -> SpamFragment()
-            else -> null
-        }
+        when (item.itemId) {
+            R.id.nav_compose -> {
+                startActivity(Intent(this, ComposeActivity::class.java))
+            }
+            else -> {
+                val fragment = when (item.itemId) {
+                    R.id.nav_inbox -> InboxFragment()
+                    R.id.nav_outbox -> OutboxFragment()
+                    R.id.nav_trash -> TrashFragment()
+                    R.id.nav_spam -> SpamFragment()
+                    else -> null
+                }
 
-        fragment?.let {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, it)
-                .addToBackStack(null)
-                .commit()
+                fragment?.let {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, it)
+                        .addToBackStack(null)
+                        .commit()
+                }
+            }
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
