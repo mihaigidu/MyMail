@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Toolbar arriba -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_inbox"
         android:layout_width="match_parent"
@@ -13,7 +12,6 @@
         android:title="Inbox"
         android:titleTextColor="@android:color/white" />
 
-    <!-- Contenido del fragmento -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

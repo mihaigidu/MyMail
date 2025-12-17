@@ -15,17 +15,13 @@ class SpamFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // 1️⃣ Inflar la vista primero
         val view = inflater.inflate(R.layout.spam_fragment, container, false)
 
-        // 2️⃣ Configurar la Toolbar después
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar_spam)
         (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
 
-        // 3️⃣ Mostrar la flecha "atrás"
         (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // 4️⃣ Acción de volver al Inbox
         toolbar.setNavigationOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, InboxFragment())

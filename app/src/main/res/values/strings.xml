@@ -4,4 +4,7 @@
     <string name="menu_gallery">menu_gallery</string>
     <string name="menu_slideshow">menu_slideshow</string>
     <string name="home">home</string>
+    <string name="menu_spam">menu spam</string>
+    <string name="menu_trash">menu trash\n</string>
+    <string name="outbox_fragment">outbox fragment</string>
 </resources>
